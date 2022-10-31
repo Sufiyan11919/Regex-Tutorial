@@ -26,7 +26,8 @@ Introductory paragraph (replace this with your text)
 - [Back-references](#back-references)
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
-- a regular expression allows to search text in a string betweem / string / expression.
+# regular Expression:- a regular expression allows to search text in a string betweem / string / expression.
+
 ## Regex Components
 
 ### Anchors
@@ -58,13 +59,34 @@ Introductory paragraph (replace this with your text)
 for example mention above for URL:- the first bracket expression is looking for any digits, or any lower cased characters from a-z, or any "." or "-" & in the last two brackets, any or all the characters are been searched
 
 ### Greedy and Lazy Match
+- In general 'Greedy' means match longest possible string. 'Lazy' means match shortest possible string.
 
+- The lazy mode of quantifiers is an opposite to the greedy mode. It means: “repeat minimal number of times”. We can enable it by putting a question mark '?' after the quantifier, so that it becomes *? or +? or even ?? for '?'. To make things clear: usually a question mark ? is a quantifier by itself (zero or one), but if added after another quantifier (or even itself) it gets another meaning – it switches the matching mode from greedy to lazy.
+Greedy will look for the longest possible string to consume, starting with the < , then looking for matching any character , excluding new lines. The + to repeat the proceeding as often as it can, and > is the end of the string.
+
+-------------------------------------------------------------------------------------------------
+|    Greedy quantifier	  |      Lazy quantifier	    |            Description                 |
+|    *	                  |          *?	                |    Star Quantifier: 0 or more          |   
+|    +	                  |          +?	                |    Plus Quantifier: 1 or more          |   
+|    ?	                  |          ??	                |    Optional Quantifier: 0 or 1         |
+|    {n}	              |              {n}?	        |        Quantifier: exactly n           |  
+|    {n,}	              |          {n,}?	            |    Quantifier: n or more               |
+|    {n,m}	              |          {n,m}?	            |    Quantifier: between n and m         |
+-------------------------------------------------------------------------------------------------
+     
 ### Boundaries
+- The symbol to define boundaries is \b and /b. This should be kept at the beginning and at the end. exactly like a regular search or a anchor. For example:- for returning a match "cat" the boundaries should be \bcat/b
 
 ### Back-references
+- When we want to matach characters in a group more than one time or for repeated number of times in string then the bcak- refernces must be used. For eg:- \w allows to match the previous macth code by using "capturing groups". i.e \1 is for first capturing group, \2 for second and \3 for third.
 
 ### Look-ahead and Look-behind
+- To find occuring patterns that are next to each other look-ahead and look-behind can be used. Look-ahead, using ?= is looking for a to follow to the left. Look-behing using ?<= will look for a pattern to follow.
+-  This is used for how many times the charcters have occured in the string.
+ i) Look-ahead:- ?= is use to look for a follow on left side, while
+ 2) Look-behind:- ?<= willlook for patterns after the symbol
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+- [GitHub] (https://github.com/Sufiyan11919) : https://github.com/Sufiyan11919
+-  [GitHub-Project] (https://github.com/Sufiyan11919/Regex-Tutorial/blob/main/gist-template.md) : https://github.com/Sufiyan11919/Regex-Tutorial/blob/main/gist-template.md
