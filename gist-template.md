@@ -23,7 +23,8 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 ### Anchors
-
+- Anchors belong to the family of regex tokens that don't match any characters, but that assert something about the string or the matching process. Anchors assert that the engine's current position in the string matches a well-determined location: for instance, the beginning of the string, or the end of a line.
+- For these matches, use the \A , \Z , and \z anchors (note that there is no \a anchor). The \A anchor ensures that a regex matches at the beginning of the string, while \Z and \z match at the end of the string.
 ### Quantifiers
 
 ### OR Operator
